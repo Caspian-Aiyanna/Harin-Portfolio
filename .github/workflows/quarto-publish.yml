@@ -21,10 +21,14 @@ jobs:
 
       - name: Install R packages
         run: |
-          Rscript -e 'install.packages(c("knitr", "rmarkdown"), repos="https://cloud.r-project.org")'
+          Rscript -e 'install.packages(c(
+            "knitr",
+            "rmarkdown",
+            "readr",
+            "htmltools",
+            "glue"
+          ), repos="https://cloud.r-project.org")'
 
-      - name: Render site
-        run: quarto render
 
       - name: Publish to GitHub Pages
         uses: quarto-dev/quarto-actions/publish@v2
