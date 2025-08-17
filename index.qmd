@@ -1,28 +1,22 @@
 ---
 title: "Nature Conservation • Ecological Modeling • GIS"
-date: last-modified
+page-layout: article
 ---
 
-```{r}
-#| echo: false
-author <- "Harin Aiyanna C R"
-subtitle <- "Nature Conservationist • Ecological Modeler • GIS Specialist"
-```
-
-# {{author}}
-
-**{{subtitle}}**  
+# Harin Aiyanna C R
+**Nature Conservationist • Ecological Modeler • GIS Specialist**
 
 Email: <harinaiyanna@gmail.com>  
 LinkedIn: <https://linkedin.com/in/harin-aiyanna-7042a8121>
+
 
 > I specialize in geospatial ecology and SDMs, combining **QGIS/ArcGIS**, **R**, and **MaxEnt** to solve real conservation problems. I’ve worked across **India, Italy, the Netherlands, and Poland**.
 
 ---
 
 ## Highlights
-- Program Officer at **WRCS** — led elephant conservation with 500+ farmers; GIS-based corridor mapping.
-- **Beaver SDM** (Poland): climate-driven range shift analysis; abstract presented at ICFs 2023.
+- Program Officer at **Wildlife Research and Conservation Society** — led elephant conservation with 500+ farmers; GIS-based corridor mapping.
+- **Beaver SDM** (Poland): climate-driven range shift analysis; presented at ICFs 2023.
 - Experience with **R, SPSS, STELLA, Zonation, PVA**; strong fieldwork and stakeholder engagement.
 
 [Download my CV](files/cv/Harin_Aiyanna_CV.pdf){.btn .btn-primary}
