@@ -1,0 +1,35 @@
+---
+title: "Projects"
+---
+
+This page is generated with **R** from a CSV. Edit `data/projects.csv` to update your portfolio.
+
+```{r}
+#| echo: false
+#| message: false
+library(readr)
+library(htmltools)
+
+projects <- readr::read_csv("data/projects.csv", show_col_types = FALSE)
+
+render_card <- function(title, role, year, summary, link=NULL, tags=NULL){
+  tag_badges <- NULL
+  if (!is.na(tags) && nzchar(tags)) {
+    parts <- strsplit(tags, ";")[[1]]
+    tag_badges <- tags$span(lapply(parts, function(t) tags$span(class="badge bg-secondary me-1", t)))
+  }
+  as.character(tags$div(class="card mb-3 p-3",
+    tags$h4(title),
+    tags$p(tags$strong(role), " • ", year),
+    tags$p(summary),
+    if(!is.na(link) && nzchar(link)) tags$a(href=link, target="_blank", "View") else NULL,
+    tag_badges
+  ))
+}
+
+html <- paste0(apply(projects, 1, function(r){
+  render_card(r[['title']], r[['role']], r[['year']], r[['summary']], r[['link']], r[['tags']])
+}), collapse="\n")
+
+HTML(html)
+```
