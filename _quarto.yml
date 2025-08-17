@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "Harin Aiyanna C R"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Projects"
+        href: projects.qmd
+      - text: "CV"
+        href: files/cv/Harin_Aiyanna_CV.pdf
+    right:
+      - icon: github
+        href: https://github.com/Caspian-Aiyanna
+      - icon: linkedin
+        href: https://linkedin.com/in/harin-aiyanna-7042a8121
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
