@@ -4,6 +4,7 @@ project:
 website:
   title: "Harin Aiyanna C R"
   navbar:
+    logo: files/images/logo.png   # add later; optional
     left:
       - text: "Home"
         href: index.qmd
@@ -15,12 +16,16 @@ website:
         href: files/cv/Harin_Aiyanna_CV.pdf
     right:
       - icon: github
+        aria-label: GitHub
         href: https://github.com/Caspian-Aiyanna
       - icon: linkedin
+        aria-label: LinkedIn
         href: https://linkedin.com/in/harin-aiyanna-7042a8121
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: flatly     # try: cosmo, flatly, litera, quartz, simplex
+      dark: darkly
     css: styles.css
     toc: true
