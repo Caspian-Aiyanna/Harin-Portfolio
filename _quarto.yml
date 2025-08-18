@@ -1,3 +1,6 @@
+project:
+  type: website
+
 website:
   title: "Harin Aiyanna C R"
   navbar:
@@ -14,15 +17,30 @@ website:
         href: files/cv/Harin_Aiyanna_CV.pdf
     right:
       - icon: github
+        aria-label: GitHub
         href: https://github.com/Caspian-Aiyanna
       - icon: linkedin
+        aria-label: LinkedIn
         href: https://linkedin.com/in/harin-aiyanna-7042a8121
+
+  page-footer:
+    left: "© {date} Harin Aiyanna C R"
+    right: "[Email](mailto:harinaiyanna@gmail.com) · [LinkedIn](https://linkedin.com/in/harin-aiyanna-7042a8121)"
 
 format:
   html:
     theme:
       light: litera
       dark: darkly
-    toc: true
     css: styles.css
+    toc: true
+    # Enables click-to-zoom galleries automatically (used on works.qmd)
+    lightbox: auto
 
+# Optional: better search (keep if you like built-in search)
+#filters:
+#  - quarto
+
+metadata:
+  description: "Portfolio of Harin Aiyanna C R — conservation, ecological modeling, and GIS."
+  author: "Harin Aiyanna C R"
