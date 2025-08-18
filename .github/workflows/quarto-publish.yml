@@ -24,8 +24,7 @@ jobs:
 
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          version: "stable"
+        # (no version specified to avoid 404s)
 
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
@@ -42,11 +41,8 @@ jobs:
         run: |
           quarto --version
           quarto render
-          echo "Listing build output"
-          ls -lah
           ls -lah _site || true
 
-      # Hard fail if _site is missing (prevents confusing upload errors)
       - name: Ensure _site exists
         run: |
           test -d "_site" || { echo "::error ::_site not found. Quarto render failed."; exit 1; }
