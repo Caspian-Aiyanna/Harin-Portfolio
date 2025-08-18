@@ -1,0 +1,40 @@
+---
+title: "Ongoing Work"
+page-layout: full
+# enable click-to-zoom lightbox automatically
+format:
+  html:
+    lightbox: auto
+---
+
+Below is a rolling gallery of current fieldwork, modeling, and outreach. Click any photo to zoom.
+
+## Elephant Corridors & Conflict Mitigation (2025)
+
+Short note: GIS corridor validation with community inputs; low-cost deterrents; stakeholder mapping.
+
+::: {layout-ncol=3 .gallery-grid}
+![](files/images/works/ele1.jpg)
+![](files/images/works/ele2.jpg)
+![](files/images/works/ele3.jpg)
+:::
+
+## Beaver SDM – Climate Shift Diagnostics (TESAF)
+
+Short note: SDMs under CMIP6; suitability shift & patch dynamics; manuscript prep.
+
+::: {layout-ncol=3 .gallery-grid}
+![](files/images/works/beaver1.jpg)
+![](files/images/works/beaver2.jpg)
+![](files/images/works/beaver3.jpg)
+:::
+
+## Outreach & Talks
+
+Short note: Workshops with farmers, policy brief drafts, and conference presentations.
+
+::: {layout-ncol=3 .gallery-grid}
+![](files/images/works/outreach1.jpg)
+![](files/images/works/outreach2.jpg)
+![](files/images/works/outreach3.jpg)
+:::
