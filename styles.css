@@ -2,3 +2,21 @@
 .navbar-brand { font-weight: 700; }
 .card { border-radius: 14px; }
 .badge { margin-right: .25rem; }
+/* Brighten links and buttons a touch */
+:root {
+  --bs-primary: #1e88e5; /* primary accent */
+}
+a { text-underline-offset: 2px; }
+
+/* Card polish */
+.card { border: 0; border-radius: 16px; }
+.shadow-sm { box-shadow: 0 8px 22px rgba(0,0,0,.06) !important; }
+
+/* Headings a bit bolder */
+h1,h2,h3 { letter-spacing: .2px; }
+
+/* Gallery grid spacing */
+.gallery-grid img {
+  width: 100%; height: 220px; object-fit: cover;
+  border-radius: 12px; margin-bottom: .75rem;
+}
