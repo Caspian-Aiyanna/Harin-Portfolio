@@ -1,10 +1,6 @@
-project:
-  type: website
-
 website:
   title: "Harin Aiyanna C R"
   navbar:
-    logo: files/images/logo.png   # add later; optional
     left:
       - text: "Home"
         href: index.qmd
@@ -12,14 +8,14 @@ website:
         href: about.qmd
       - text: "Projects"
         href: projects.qmd
+      - text: "Works"
+        href: works.qmd
       - text: "CV"
         href: files/cv/Harin_Aiyanna_CV.pdf
     right:
       - icon: github
-        aria-label: GitHub
         href: https://github.com/Caspian-Aiyanna
       - icon: linkedin
-        aria-label: LinkedIn
         href: https://linkedin.com/in/harin-aiyanna-7042a8121
 
 format:
