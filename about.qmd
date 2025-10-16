@@ -8,7 +8,7 @@ format:
 
 # About Me
 
-![](img/harin.jpg){.rounded-circle width="160px" style="margin-bottom: 1rem;"}
+![](files/images/pic 2.png){.rounded-circle width="160px" style="margin-bottom: 1rem;"}
 
 > *"Protecting species and landscapes through science, code, and collaboration."*
 
