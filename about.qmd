@@ -1,20 +1,59 @@
 ---
 title: "About"
+page-layout: article
+format:
+  html:
+    css: styles.css
 ---
 
-I am a nature conservation professional specializing in the geospatial aspects of ecology. My background is in Forest Sciences (M.Sc., University of Padua) with an Erasmus exchange at Wageningen UR. I have experience in **quantitative, qualitative, and mixed-methods** research and in disseminating scientific knowledge to diverse audiences.
+# About Me
 
-### Experience
-- **WRCS (2019–2020)** – Program Officer & Researcher  
-  Led community-based elephant conservation; coordinated with forest authorities; designed low-cost crop protection; GIS corridor mapping; featured by National Geographic.
+I am a nature conservation professional working at the intersection of **field ecology, geospatial analysis, and species distribution modeling (SDM)**.  
+My work blends ecological insights with open-source tools to inform real-world conservation decisions.
 
-- **TESAF, University of Padua (2023)** – Internship  
-  Species Distribution Modeling for **Castor fiber** in Poland; quantified northward habitat shifts; presented abstract at ICFs 2023; manuscript in preparation.
+I hold an M.Sc. in Forest Sciences (University of Padua), with an Erasmus exchange at Wageningen UR.  
+My focus areas include ecological modeling, remote sensing, stakeholder-driven conservation, and environmental communication.
 
-- **CES, IISc** – Internship (2018)  
-  Behavioural ecology: katydid communication studies; nocturnal field data collection.
+---
 
-### Education
-- **M.Sc. Forest Sciences**, University of Padua — 105/110 (2020–2023)  
-- **Exchange**, Wageningen UR — Forest & Nature Conservation (2021–2022)  
-- **B.Sc. Agri Marketing & Co‑operation**, UAS Bangalore — 8.12/10 (2015–2019)
+## Experience
+
+### Wildlife Research and Conservation Society (WRCS) — *Program Officer & Researcher*  
+**2019–2020**  
+- Led elephant conservation efforts involving 500+ farmers  
+- Developed low-cost crop protection methods  
+- Coordinated with forest departments  
+- Validated GIS corridors using ground-level data  
+- Featured in a **National Geographic documentary**
+
+---
+
+### TESAF, University of Padua — *Research Intern*  
+**2023**  
+- Modeled **Castor fiber** (beaver) distributions under CMIP6 climate scenarios  
+- Quantified northward shifts and patch fragmentation  
+- Presented abstract at **ICFs 2023**  
+- Manuscript in preparation
+
+---
+
+### Centre for Ecological Sciences, IISc — *Research Assistant*  
+**2018**  
+- Assisted on katydid communication behavior studies  
+- Conducted nocturnal fieldwork and video data capture  
+- Gained early exposure to behavioural ecology research
+
+---
+
+## Education
+
+- **M.Sc. Forest Sciences**, University of Padua — *Grade: 105/110*  
+  *(Erasmus Exchange at Wageningen UR, Forest & Nature Conservation)*  
+  *2020–2023*
+
+- **B.Sc. Agricultural Marketing & Co‑operation**, UAS Bangalore — *CGPA: 8.12/10*  
+  *2015–2019*
+
+---
+
+If you'd like to explore my recent projects, [head over here →](projects.qmd)
