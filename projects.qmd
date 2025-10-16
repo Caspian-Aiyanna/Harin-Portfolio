@@ -1,43 +1,63 @@
+---
+title: "Projects"
+format: html
+page-layout: full
+---
 ```{r}
 #| echo: false
 #| message: false
 library(readr)
 library(htmltools)
 
+# Load the project data
 projects <- readr::read_csv("data/projects.csv", show_col_types = FALSE)
 
-render_card <- function(title, role, year, summary, link = NULL, tag_text = NULL){
-  # Build badges if tag_text is present (semicolon-separated)
+# Function to render each project card
+render_card <- function(title, role, year, summary, link = NULL, tag_text = NULL) {
+  # Render tags as badges
   badge_block <- NULL
   if (!is.null(tag_text) && !is.na(tag_text) && nzchar(tag_text)) {
     parts <- strsplit(tag_text, ";")[[1]]
-    badge_block <- htmltools::tags$span(
-      lapply(parts, function(t) htmltools::tags$span(class="badge bg-secondary me-1", t))
+    badge_block <- htmltools::tags$div(
+      lapply(parts, function(t) {
+        htmltools::tags$span(class = "badge bg-secondary me-1", t)
+      })
     )
   }
 
+  # Combine all card elements
   as.character(
-    htmltools::div(class="card mb-3 p-3",
+    htmltools::div(class = "card mb-4 p-3 shadow-sm",
       htmltools::tags$h4(title),
-      htmltools::tags$p(htmltools::tags$strong(role), " • ", year),
+      htmltools::tags$p(
+        htmltools::tags$strong(role),
+        htmltools::tags$span(" • ", year)
+      ),
       htmltools::tags$p(summary),
       if (!is.null(link) && !is.na(link) && nzchar(link)) {
-        htmltools::tags$a(href = link, target = "_blank", "View")
+        htmltools::tags$a(href = link, target = "_blank", class = "btn btn-outline-primary mt-2", "View Project")
       },
       badge_block
     )
   )
 }
 
-html <- paste0(apply(projects, 1, function(r){
-  render_card(
-    title   = r[['title']],
-    role    = r[['role']],
-    year    = r[['year']],
-    summary = r[['summary']],
-    link    = r[['link']],
-    tag_text= r[['tags']]
-  )
-}), collapse = "\n")
+# Loop through each row and render all cards
+html <- paste0(
+  apply(projects, 1, function(r) {
+    render_card(
+      title    = r[["title"]],
+      role     = r[["role"]],
+      year     = r[["year"]],
+      summary  = r[["summary"]],
+      link     = r[["link"]],
+      tag_text = r[["tags"]]
+    )
+  }),
+  collapse = "\n"
+)
 
+# Output the final HTML block
 HTML(html)
+```
+
