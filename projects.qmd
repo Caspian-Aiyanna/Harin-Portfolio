@@ -1,20 +1,43 @@
 ---
 title: "Projects"
-format: html
+format:
+  html:
+    css: styles.css
 page-layout: full
+class: projects-page
 ---
+
+# Projects
+
+Below is a selection of my field, research, and outreach projects.  
+Each combines ecological insight with applied conservation methods and technology.
+
 ```{r}
 #| echo: false
 #| message: false
 library(readr)
 library(htmltools)
 
-# Load the project data
+# Load project data from CSV
 projects <- readr::read_csv("data/projects.csv", show_col_types = FALSE)
 
 # Function to render each project card
-render_card <- function(title, role, year, summary, link = NULL, tag_text = NULL) {
-  # Render tags as badges
+render_card <- function(title, role, year, summary, link = NULL, tag_text = NULL,
+                        image1 = NULL, image2 = NULL) {
+
+  # Image block (supports up to 2 images)
+  image_block <- NULL
+  if (!is.null(image1) && nzchar(image1)) {
+    image_block <- htmltools::tags$div(
+      class = "project-images mb-3",
+      htmltools::tags$img(src = image1, class = "img-fluid rounded me-2"),
+      if (!is.null(image2) && nzchar(image2)) {
+        htmltools::tags$img(src = image2, class = "img-fluid rounded")
+      }
+    )
+  }
+
+  # Badge block
   badge_block <- NULL
   if (!is.null(tag_text) && !is.na(tag_text) && nzchar(tag_text)) {
     parts <- strsplit(tag_text, ";")[[1]]
@@ -25,7 +48,7 @@ render_card <- function(title, role, year, summary, link = NULL, tag_text = NULL
     )
   }
 
-  # Combine all card elements
+  # Card layout
   as.character(
     htmltools::div(class = "card mb-4 p-3 shadow-sm",
       htmltools::tags$h4(title),
@@ -33,16 +56,22 @@ render_card <- function(title, role, year, summary, link = NULL, tag_text = NULL
         htmltools::tags$strong(role),
         htmltools::tags$span(" • ", year)
       ),
+      image_block,
       htmltools::tags$p(summary),
-      if (!is.null(link) && !is.na(link) && nzchar(link)) {
-        htmltools::tags$a(href = link, target = "_blank", class = "btn btn-outline-primary mt-2", "View Project")
+      if (!is.null(link) && nzchar(link)) {
+        htmltools::tags$a(
+          href = link,
+          target = "_blank",
+          class = "btn btn-outline-primary mt-2",
+          "View Project"
+        )
       },
       badge_block
     )
   )
 }
 
-# Loop through each row and render all cards
+# Render all project cards
 html <- paste0(
   apply(projects, 1, function(r) {
     render_card(
@@ -51,13 +80,13 @@ html <- paste0(
       year     = r[["year"]],
       summary  = r[["summary"]],
       link     = r[["link"]],
-      tag_text = r[["tags"]]
+      tag_text = r[["tags"]],
+      image1   = r[["image1"]],
+      image2   = r[["image2"]]
     )
   }),
   collapse = "\n"
 )
 
-# Output the final HTML block
 HTML(html)
 ```
-
