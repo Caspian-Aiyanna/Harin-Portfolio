@@ -2,7 +2,7 @@ name: Quarto Publish
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -19,14 +19,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Quarto
+      - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        # (no version specified to avoid 404s)
 
-      - name: Setup R
+      - name: Set up R
         uses: r-lib/actions/setup-r@v2
         with:
           r-version: "4.3.1"
@@ -34,20 +33,22 @@ jobs:
       - name: Install R packages
         run: |
           Rscript -e 'install.packages(c(
-            "knitr","rmarkdown","readr","htmltools","glue"
-          ), repos="https://cloud.r-project.org")'
+            "knitr", "rmarkdown", "readr", "htmltools", "glue"
+          ), repos = "https://cloud.r-project.org")'
 
-      - name: Render site
+      - name: Render Quarto site
         run: |
           quarto --version
           quarto render
-          ls -lah _site || true
 
-      - name: Ensure _site exists
+      - name: Ensure _site directory exists
         run: |
-          test -d "_site" || { echo "::error ::_site not found. Quarto render failed."; exit 1; }
+          if [ ! -d "_site" ]; then
+            echo "::error ::_site directory not found. Rendering may have failed."
+            exit 1
+          fi
 
-      - name: Upload artifact to Pages
+      - name: Upload artifact to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
@@ -58,6 +59,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - id: deployment
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
