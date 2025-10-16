@@ -1,22 +1,36 @@
 ---
 title: "Nature Conservation • Ecological Modeling • GIS"
 page-layout: article
+format:
+  html:
+    css: styles.css
 ---
 
-# Harin Aiyanna C R
+# Harin Aiyanna C R  
 **Nature Conservationist • Ecological Modeler • GIS Specialist**
 
 Email: <harinaiyanna@gmail.com>  
-LinkedIn: <https://linkedin.com/in/harin-aiyanna-7042a8121>
+LinkedIn: [linkedin.com/in/harin-aiyanna-7042a8121](https://linkedin.com/in/harin-aiyanna-7042a8121)
 
+---
 
-> I specialize in geospatial ecology and SDMs, combining **QGIS/ArcGIS**, **R**, and **MaxEnt** to solve real conservation problems. I’ve worked across **India, Italy, the Netherlands, and Poland**.
+> I build bridges between field conservation and ecological modeling.  
+> My work combines geospatial tools, open-source methods, and stakeholder engagement to guide real-world biodiversity solutions.  
+> Passionate about elephants, ecological forecasting, and community-led science.
 
 ---
 
 ## Highlights
-- Program Officer at **Wildlife Research and Conservation Society** — led elephant conservation with 500+ farmers; GIS-based corridor mapping.
-- **Beaver SDM** (Poland): climate-driven range shift analysis; presented at ICFs 2023.
-- Experience with **R, SPSS, STELLA, Zonation, PVA**; strong fieldwork and stakeholder engagement.
 
-[Download my CV](files/cv/Harin_Aiyanna_CV.pdf){.btn .btn-primary}
+- 🐘 Led a **community-based elephant conservation** project in India with 500+ farmers; GIS-based conflict corridor mapping  
+- 🌍 Developed **climate-informed SDMs** for Eurasian beavers in Poland — presented at ICFs 2023  
+- 🛰️ Skilled in **QGIS, ArcGIS, R, MaxEnt, STELLA, PVA, Zonation**  
+- 🎓 PhD researcher on habitat modeling and climate impact on species ranges  
+- 🌐 Contributor to a **National Geographic documentary** on human-wildlife coexistence
+
+---
+
+[Download My CV](files/cv/Harin_Aiyanna_CV.pdf){.btn .btn-primary}
+
+[Explore Projects →](projects.qmd){.btn .btn-outline-secondary ms-2}
+
