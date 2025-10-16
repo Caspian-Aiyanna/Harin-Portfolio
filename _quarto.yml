@@ -3,6 +3,9 @@ project:
 
 website:
   title: "Harin Aiyanna C R"
+  site-url: "https://Caspian-Aiyanna.github.io/Harin-Portfolio/"
+  favicon: img/favicon.ico  # Optional: Add favicon if available
+
   navbar:
     left:
       - text: "Home"
@@ -25,7 +28,9 @@ website:
 
   page-footer:
     left: "© {date} Harin Aiyanna C R"
-    right: "[Email](mailto:harinaiyanna@gmail.com) · [LinkedIn](https://linkedin.com/in/harin-aiyanna-7042a8121)"
+    right: |
+      [Email](mailto:harinaiyanna@gmail.com) · 
+      [LinkedIn](https://linkedin.com/in/harin-aiyanna-7042a8121)
 
 format:
   html:
@@ -34,13 +39,12 @@ format:
       dark: darkly
     css: styles.css
     toc: true
-    # Enables click-to-zoom galleries automatically (used on works.qmd)
     lightbox: auto
-
-# Optional: better search (keep if you like built-in search)
-#filters:
-#  - quarto
+    number-sections: false
+    smooth-scroll: true
 
 metadata:
-  description: "Portfolio of Harin Aiyanna C R — conservation, ecological modeling, and GIS."
+  title: "Harin Aiyanna C R — Portfolio"
+  description: "Portfolio of Harin Aiyanna C R — Nature Conservation, Ecological Modeling, and GIS Projects."
   author: "Harin Aiyanna C R"
+  lang: en
