@@ -8,8 +8,15 @@ format:
 
 # About Me
 
+![](img/harin.jpg){.rounded-circle width="160px" style="margin-bottom: 1rem;"}
+
+> *"Protecting species and landscapes through science, code, and collaboration."*
+
 I am a nature conservation professional working at the intersection of **field ecology, geospatial analysis, and species distribution modeling (SDM)**.  
 My work blends ecological insights with open-source tools to inform real-world conservation decisions.
+
+...
+
 
 I hold an M.Sc. in Forest Sciences (University of Padua), with an Erasmus exchange at Wageningen UR.  
 My focus areas include ecological modeling, remote sensing, stakeholder-driven conservation, and environmental communication.
